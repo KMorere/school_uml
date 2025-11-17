@@ -1,0 +1,112 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.0.3">
+  <diagram name="Page-1" id="pj-jzwT5Dc6077CDKN8z">
+    <mxGraphModel dx="1426" dy="1893" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GUir-q-JcyObKdRAM4pV-15" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-1" target="GUir-q-JcyObKdRAM4pV-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-1" value="Enseignant" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="250" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-14" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-4" target="GUir-q-JcyObKdRAM4pV-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-34" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-4" target="GUir-q-JcyObKdRAM4pV-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-4" value="Eleve" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="70" y="360" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-8" value="System" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" vertex="1" parent="1">
+          <mxGeometry x="150" y="-280" width="520" height="750" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-9" value="Participer à une classe" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="400" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-10" value="Gérer une classe" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="255" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-16" value="Exploiter les adresses" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="-60" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-19" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-17" target="GUir-q-JcyObKdRAM4pV-16">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="94.28" y="140" as="sourcePoint" />
+            <mxPoint x="369.9979676972448" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="94" y="100" />
+              <mxPoint x="94" y="40" />
+              <mxPoint x="300" y="40" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-17" target="GUir-q-JcyObKdRAM4pV-20">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="95" y="150" />
+              <mxPoint x="340" y="150" />
+              <mxPoint x="340" y="85" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-17" target="GUir-q-JcyObKdRAM4pV-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-17" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="70" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-20" value="Organiser les cours" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="50" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-21" value="Assigner un identifiant à un élève" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="-160" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-25" target="GUir-q-JcyObKdRAM4pV-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-25" value="Gérer les enseignants" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="230" y="-250" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-32" value="S&#39;inscrire à l&#39;école" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="290" y="330" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-36" value="Admin" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;" vertex="1" parent="1">
+          <mxGeometry x="700" y="325" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-38" target="GUir-q-JcyObKdRAM4pV-32">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-38" value="Contrôler les demandes d&#39;inscription" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="320" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-36" target="GUir-q-JcyObKdRAM4pV-38">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-42" target="GUir-q-JcyObKdRAM4pV-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-44" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GUir-q-JcyObKdRAM4pV-43">
+          <mxGeometry x="-0.1035" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-42" value="Enseigner" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="440" y="170" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-46" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;endArrow=none;endFill=0;" edge="1" parent="1" source="GUir-q-JcyObKdRAM4pV-45" target="GUir-q-JcyObKdRAM4pV-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-47" value="&amp;lt;&amp;lt;extends&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="GUir-q-JcyObKdRAM4pV-46">
+          <mxGeometry x="0.0478" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GUir-q-JcyObKdRAM4pV-45" value="Evaluer" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="255" width="140" height="50" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
