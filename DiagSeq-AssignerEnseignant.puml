@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+!pragma teoz true
+!pragma sequenceMessageSpan true
+
+== Attribuer un enseignant à un cours ==
+
+Enseignant -> System: Renseigne le cours et l'enseignant
+alt Enseignant disponible
+    System -> Enseignant: Valide l'assignation et renvoie une confirmation
+else Enseignant indisponible
+    System -> Enseignant: Renvoie une erreur et donne la possibilité de recommencer
+end
+
+alt Saisie incorrecte
+    System -> Enseignant : Renvoie une erreur et demande de corriger
+end
+
+@enduml
