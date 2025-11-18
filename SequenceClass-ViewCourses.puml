@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'[Affichage teoz activé]
+!pragma teoz true
+'[Titre du graphique]
+title Diagramme de séquence pour le cas d'utilisation "Consulter la liste des cours"
+
+'[Titre du cas d'utilisation]
+== Consulter la liste des cours ==
+
+'****** Initialisation acteur ******
+'[Cache titre de pied 'Eleve' 'Système' 'Enseignant']
+hide footbox
+Enseignant -> Système: consulter la liste des cours
+
+'[Active 'barre de vie']
+Activate Système
+
+'[Active la numérotation]
+autonumber
+'****** Condition présence Enseignant ******
+alt#Gold #LightBlue Enseignant existent
+    Système -> Enseignant: Affiche les informations du cours et du professeur
+    Système -> Enseignant: Afficher les participants
+    '[Désactive la numérotation]
+    autonumber stop
+else #Pink Enseignant non existant
+    Système -> Système: Affiche pas de cours
+end
+
+'[Désactive 'barre de vie']
+Deactivate Système
+
+'****** Initialisation acteur ******
+Élève -> Système: consulter la liste des cours
+
+'[Active 'barre de vie']
+Activate Système
+
+'[Active la numérotation]
+autonumber
+'****** Condition présence Élève ******
+alt#Gold #LightBlue Élève existent
+    Système -> Élève: Affiche les informations du cours et du professeur
+    Système -> Élève: Afficher les participants
+    '[Désactive la numérotation]
+    autonumber stop
+else #Pink Élève non existant
+    Système -> Système: N'affiche pas l'élève
+end
+
+'[Désactive 'barre de vie']
+Deactivate Système
+
+@enduml
