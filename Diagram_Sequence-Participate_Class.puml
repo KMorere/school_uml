@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+!pragma teoz true
+!pragma sequenceMessageSpan true
+
+hide footbox
+title Diagramme de séquence pour le cas d'utilisation "Participer à une classe"
+
+== Participer à une classe ==
+
+Élève -> Système: Participer à une classe
+Enseignant -> Système: Participer à une classe
+Activate Système
+
+autonumber
+alt#Gold #LightBlue Enseignant existent
+    Enseignant -> Système: Le professeur consulte la liste des élèves
+    Enseignant -> Élève: Il appelle les élèves à tour de rôle
+    Élève -> Enseignant: L’élève répond présent ou ne répond pas
+    alt#Gold #LightBlue Eleve présent
+        Enseignant -> Système: Le professeur note la présence
+        autonumber stop
+    else #Pink Eleve Absent
+        Enseignant -> Système:  Le professeur note la non présence
+    end
+    autonumber 5
+    Enseignant -> Système: Puis dispense le cours
+
+
+autonumber stop
+else #Pink Enseignant non existant
+    Système -> Système: Renvoie un message de non-présence de l'enseignant
+end
+
+Système -> Élève : Fin du cours
+Système -> Enseignant : Fin du cours
+
+autonumber 7
+Système -> Enseignant: A la fin du cours, l'enseignant note l’appréciation de l’élève
+Deactivate Système
+
+@enduml
