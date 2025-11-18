@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+!pragma teoz true
+!pragma sequenceMessageSpan true
+
+== Consulter la liste des cours ==
+
+Eleve -> System: consulter la liste des cours
+Enseignant -> System: consulter la liste des cours
+alt Eleve et Enseignant existent
+    System -> Eleve: Renvoie la liste de cours ou il figure
+    System -> Enseignant: Renvoie la liste de cours qu'il doit présenter
+else Eleve ou Enseignant non existant
+    System -> Eleve: Renvoie une erreur
+    System -> Enseignant: Renvoie une erreur
+end
+
+
+@enduml
