@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+== Student Application ==
+
+Student -> System : Send application
+
+alt Valid document
+    System -> System : register application form
+    System -> Admin : Send application
+else Invalid document
+    System -> Student : Error message
+end
+
+alt Accept application
+    Admin -> System : Confirm application
+    System -> System : Add Student ID
+    System -> Student : Send confirmation message
+else Reject application
+    Admin -> System : Reject application
+    System -> Student : Send rejection message
+end
+
+@enduml

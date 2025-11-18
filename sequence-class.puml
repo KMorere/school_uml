@@ -6,10 +6,10 @@ autonumber
 !pragma teoz true
 !pragma sequenceMessageSpan true
 
-== Consulter la liste des cours ==
+== Participer à un cours ==
 
-Eleve -> System: consulter la liste des cours
-Enseignant -> System: consulter la liste des cours
+Eleve -> System: Consulter la liste des cours
+Enseignant -> System: Consulter la liste des cours
 alt Eleve et Enseignant existent
     System -> Eleve: Renvoie la liste de cours ou il figure
     System -> Enseignant: Renvoie la liste de cours qu'il doit présenter
@@ -21,10 +21,10 @@ end
 System -> Eleve : Terminer le cours
 System -> Enseignant : Terminer le cours
 alt Fin de la journée
-    System -> Enseignant : Met fin à son cours
-    System -> Eleve : Renvoie les élèves chez eux
+    System -> Enseignant : Message de fin de la journée
+    System -> Eleve : Message de fin de la journée
 else Fin du cours actuel
-    Eleve -> System : Consulte le prochain cours
-    Enseignant -> System : Consulte le prochain cours
+    Eleve <- System : Affiche le prochain cours
+    Enseignant <- System : Affiche le prochain cours
 
 @enduml
