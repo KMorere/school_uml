@@ -1,0 +1,49 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'[Affichage teoz activé]
+!pragma teoz true
+'[Titre du graphique]
+title Diagramme de séquence pour le cas d'utilisation "Attribuer un élève"
+
+'[Titre du cas d'utilisation]
+== Attribuer un élève ==
+
+'****** Initialisation acteur ******
+'[Cache titre de pied 'Admin' 'Système']
+hide footbox
+Admin -> Système: Attribuer un élève
+
+'[Active 'barre de vie']
+Activate Système
+
+'[Active la numérotation]
+autonumber
+'****** Condition présence Enseignant ******
+alt#Gold #LightBlue Élève existent
+    Admin -> Système: L'Admin renseigne l'information de l'élève
+
+    '****** Condition présence Élève ******
+    alt#Gold #LightBlue Cours planifié
+        Admin -> Système: L'Admin renseigne le cours
+        '[Désactive la numérotation]
+        autonumber stop
+    else #Pink Cours non planifié
+        Système -> Admin:  Renvoie un message cours non planifié
+    end
+    '[Active la numérotation à 5]
+    autonumber 5
+
+'[Désactive la numérotation]
+autonumber stop
+else #Pink Élève non existant
+    Système -> Admin: Renvoie un message Élève non existant
+end
+
+'[Active la numérotation à 7]
+autonumber 7
+Système -> Admin: Confirmation assignation du cours à l'Élève réussi
+'[Désactive 'barre de vie']
+Deactivate Système
+
+@enduml
