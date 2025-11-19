@@ -3,24 +3,24 @@
 
 autonumber
 
-== Student Application ==
+== Inscription de l'étudiant ==
 
-Student -> System : Send application
+Étudiant -> Système : Envoie son dossier d'inscription
 
-alt #lightblue Valid document
-    System -> System : register application form
-    System -> Admin : Send application
-else #pink Invalid document
-    System -> Student : Error message
+alt #lightblue Les documents sont valides
+    Système -> Système : Enregistre la demande d'inscription
+    Système -> Admin : Envoie la demande d'inscription
+else #pink Les documents sont non valides
+    Système -> Étudiant : Message d'erreur
 end
 
-alt #lightblue Accept application
-    Admin -> System : Confirm application
-    System -> System : Add Student ID
-    System -> Student : Send confirmation message
-else #pink Reject application
-    Admin -> System : Reject application
-    System -> Student : Send rejection message
+alt #lightblue La candidature a été acceptée
+    Admin -> Système : Retient la candidature
+    Système -> Système : Attribue un ID à l'étudiant
+    Système -> Étudiant : Envoie un message d'acceptation
+else #pink La candidature a été rejetée
+    Admin -> Système : Envoie un message de refus
+    Système -> Étudiant : Send rejection message
 end
 
 @enduml
