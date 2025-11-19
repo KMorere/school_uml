@@ -13,11 +13,13 @@ left to right direction
 (Gérer les élèves) as (ManageSchoolStudent)
 (Planifier les cours) as (PlanningLessons)
 (Attribuer un enseignant) as (AssignTeacher)
+(Attribuer un élève) as (AssignSchoolStudent)
 
 Admin --> ManageTeacher
 Admin --> ManageSchoolStudent
 Admin --> PlanningLessons
 (PlanningLessons) ..> (AssignTeacher) : <<include>>
+(PlanningLessons) ..> (AssignSchoolStudent) : <<include>>
 
 '********* Teacher *********
 (Gérer un cours) as (ManageCourse)
