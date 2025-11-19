@@ -1,0 +1,113 @@
+@startuml
+
+package Class {
+
+    package Interface {
+        interface IParticipable {
+            Participate(): void
+        }
+
+        interface ITeacher {
+            Teach(): void
+        }
+    }
+
+    abstract class Person {
+        +firstname: String
+        +surname: String
+        +age: Int
+        +address: Address
+        +planning: Planning
+        {static} Person() 'Constructeur'
+        {abstract} Participate(): void
+    }
+
+    class Student <extends Person> {
+        +id: Int
+        {method} Participate(): void
+    }
+
+    class Teacher <extends Person> {
+        +id: Int
+        {method} Participate(): void
+        {method} Teach(): void
+    }
+
+    class Admin <extends Person> {
+        +id: Int
+        {method} Participate(): void
+        {method} Teach(): void
+    }
+
+    class Address {
+        +id: Int
+        +city: City
+        +streetNumber: String
+        +street: String
+        +additionalInfo: String
+    }
+
+    class City {
+        +id: Int
+        +name: String
+        +postCode: String
+        +country: String
+    }
+
+    class School {
+        +id: Int
+        +classroom: List<Classroom>
+        +admin: Admin
+    }
+
+    class Classroom {
+        +id: Int
+        +name: String
+        +size: Int
+        +person: Person(Size)
+    }
+
+    class Planning {
+        +id: Int
+        +planning: Collection<Date, Subject>
+    }
+
+    class Date {
+        +id: Int
+        +numberDay: Int
+        +month: String
+        +year: Int
+    }
+
+    class Subject {
+        +id: Int
+        +name: String
+        +startDate: Date
+        +endDate: Date
+    }
+    note left of Subject
+        This member is "la matière du cours"
+    end note
+}
+
+'*************Relation des classes*************
+'==> Bloc autour de Person
+Person::address "1..n" -up-o "1" Address
+Person ^-up-- "1" Student
+Person ^-up-- "1" Teacher
+Person "1..n" ^-down-- "1" Admin
+Person::planning "1" *-right-- "1..n" Planning
+'==> Bloc autour de Address
+Address::city "1..n" o-right- "1" City
+'==> Bloc autour de Admin
+School::admin -left- Admin
+'==> Bloc autour de School
+School::classroom "1" *-right- "1..n" Classroom
+'==> Bloc autour de Planning
+Planning::planning -down- Subject
+Planning::planning -down- Date
+'==> Bloc autour de Subject
+Subject *-right- Date
+
+
+@enduml
