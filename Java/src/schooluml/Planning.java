@@ -24,14 +24,14 @@ public class Planning {
     // Accesseurs
     public int getCountId() {
         /**
-         * @return id
+         * @return countId
          */
         return countId;
     }
 
-    public void setCountId(int ) {
+    public void setCountId() {
         /**
-         * @param id
+         * @param countId
          */
         countId = getCountId() + 1;
     }
@@ -43,7 +43,7 @@ public class Planning {
         return this.id;
     }
 
-    public void setId(int id) {
+    public void setId() {
         /**
          * @param id
          */

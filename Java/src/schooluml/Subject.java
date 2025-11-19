@@ -30,14 +30,14 @@ public class Subject {
     // Accesseurs
     public int getCountId() {
         /**
-         * @return id
+         * @return countId
          */
         return countId;
     }
 
-    public void setCountId(int ) {
+    public void setCountId() {
         /**
-         * @param id
+         * @param countId
          */
         countId = getCountId() + 1;
     }
