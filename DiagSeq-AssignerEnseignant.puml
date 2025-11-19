@@ -9,14 +9,17 @@ autonumber
 == Attribuer un enseignant à un cours ==
 
 Admin -> System: Renseigne le cours et l'enseignant à une date
-alt Enseignant disponible
+
+alt#Gold #Pink Saisie incorrecte
+    System -> Admin : Renvoie une erreur et demande de corriger
+end
+
+alt#Gold #LightBlue Enseignant disponible
     System -> Admin: Valide l'assignation et renvoie une confirmation
-else Enseignant indisponible
+else #Pink Enseignant indisponible
     System -> Admin: Renvoie une erreur et donne la possibilité de recommencer
 end
 
-alt Saisie incorrecte
-    System -> Admin : Renvoie une erreur et demande de corriger
-end
+
 
 @enduml
