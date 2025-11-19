@@ -47,6 +47,7 @@ public class Planning {
         /**
          * @param id
          */
+        setCountId();
         this.id = setCountId();
     }
 
