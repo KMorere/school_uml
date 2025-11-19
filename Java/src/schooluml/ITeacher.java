@@ -7,8 +7,5 @@ public class ITeacher {
     /**
      * Methode interface
      */
-    public Teach() {
-
-    }
-
+    public Teach(); // Methode Teach is useed for to have to the ability to tech
 }
