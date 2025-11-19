@@ -7,8 +7,5 @@ public class IParticipable {
     /**
      * Methode interface
      */
-    public Participate() {
-
-    }
-
+    public Participate(); // Methode Participate is useed for the option to participate in a course.
 }
