@@ -28,6 +28,7 @@ alt#Gold #LightBlue Élève existent
         Admin -> Système: L'Admin renseigne le cours
         '[Désactive la numérotation]
         autonumber stop
+        Système -> Admin: Confirmation assignation du cours à l'Élève réussi
     else #Pink Cours non planifié
         Système -> Admin:  Renvoie un message cours non planifié
     end
@@ -40,9 +41,6 @@ else #Pink Élève non existant
     Système -> Admin: Renvoie un message Élève non existant
 end
 
-'[Active la numérotation à 7]
-autonumber 7
-Système -> Admin: Confirmation assignation du cours à l'Élève réussi
 '[Désactive 'barre de vie']
 Deactivate Système
 
