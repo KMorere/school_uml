@@ -8,6 +8,8 @@ public class Planning {
     private int id;
     private TreeMap<Date, Subject> planning;
 
+    private static int countId = 0;
+
     // Constructeurs
     public Planning(int id, Date date, Subject subject) {
         /**
@@ -20,6 +22,20 @@ public class Planning {
     }
 
     // Accesseurs
+    public int getCountId() {
+        /**
+         * @return id
+         */
+        return countId;
+    }
+
+    public void setCountId(int ) {
+        /**
+         * @param id
+         */
+        countId = getCountId() + 1;
+    }
+
     public int getId() {
         /**
          * @return id
@@ -31,7 +47,7 @@ public class Planning {
         /**
          * @param id
          */
-        this.id = id;
+        this.id = setCountId();
     }
 
     public TreeMap<Date, Subject> getPlanning() {
