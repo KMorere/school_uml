@@ -8,7 +8,7 @@ autonumber
 
 == Attribuer un enseignant à un cours ==
 
-Admin -> System: Renseigne le cours et l'enseignant
+Admin -> System: Renseigne le cours et l'enseignant à une date
 alt Enseignant disponible
     System -> Admin: Valide l'assignation et renvoie une confirmation
 else Enseignant indisponible
