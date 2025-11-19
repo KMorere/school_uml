@@ -1,0 +1,56 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+'[Affichage teoz activé]
+!pragma teoz true
+'[Titre du graphique]
+title Diagramme de séquence pour le cas d'utilisation "Participer à une classe"
+
+'[Titre du cas d'utilisation]
+== Participer à une classe ==
+
+'****** Initialisation acteur ******
+'[Cache titre de pied 'Eleve' 'Système' 'Enseignant']
+hide footbox
+Élève -> Système: Participer à une classe
+Enseignant -> Système: Participer à une classe
+
+'[Active 'barre de vie']
+Activate Système
+
+'[Active la numérotation]
+autonumber
+'****** Condition présence Enseignant ******
+alt#Gold #LightBlue Enseignant existent
+    Enseignant -> Système: Le professeur consulte la liste des élèves
+    Enseignant -> Élève: Il appelle les élèves à tour de rôle
+    Élève -> Enseignant: L’élève répond présent ou ne répond pas
+
+    '****** Condition présence Élève ******
+    alt#Gold #LightBlue Eleve présent
+        Enseignant -> Système: Le professeur note la présence
+        '[Désactive la numérotation]
+        autonumber stop
+    else #Pink Eleve Absent
+        Enseignant -> Système:  Le professeur note la non présence
+    end
+    '[Active la numérotation à 5]
+    autonumber 5
+    Enseignant -> Système: Puis dispense le cours
+
+'[Désactive la numérotation]
+autonumber stop
+else #Pink Enseignant non existant
+    Système -> Système: Renvoie un message de non-présence de l'enseignant
+end
+
+Système -> Élève : Fin du cours
+Système -> Enseignant : Fin du cours
+
+'[Active la numérotation à 7]
+autonumber 7
+Système -> Enseignant: A la fin du cours, l'enseignant note l’appréciation de l’élève
+'[Désactive 'barre de vie']
+Deactivate Système
+
+@enduml

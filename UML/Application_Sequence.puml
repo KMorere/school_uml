@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+== Inscription de l'étudiant ==
+
+Étudiant -> Système : Envoie son dossier d'inscription
+
+alt #lightblue Les documents sont valides
+    Système -> Système : Enregistre la demande d'inscription
+    Système -> Admin : Envoie la demande d'inscription
+else #pink Les documents sont non valides
+    Système -> Étudiant : Message d'erreur
+end
+
+alt #lightblue La candidature a été acceptée
+    Admin -> Système : Retient la candidature
+    Système -> Système : Attribue un ID à l'étudiant
+    Système -> Étudiant : Envoie un message d'acceptation
+else #pink La candidature a été rejetée
+    Admin -> Système : Envoie un message de refus
+    Système -> Étudiant : Send rejection message
+end
+
+@enduml
