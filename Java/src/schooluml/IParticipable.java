@@ -3,9 +3,9 @@ package schooluml;
 /**
  * Class representing a interface of IParticipable
  */
-public class IParticipable {
+public interface IParticipable {
     /**
      * Methode interface
      */
-    public Participate(); // Methode Participate is useed for the option to participate in a course.
+    public void Participate(); // Methode Participate is useed for the option to participate in a course.
 }

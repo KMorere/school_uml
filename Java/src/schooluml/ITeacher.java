@@ -3,9 +3,9 @@ package schooluml;
 /**
  * Class representing a interface of ITeacher
  */
-public class ITeacher {
+public interface ITeacher {
     /**
      * Methode interface
      */
-    public Teach(); // Methode Teach is useed for to have to the ability to tech
+    public void Teach(); // Method Teach is used to have the ability to teach
 }
