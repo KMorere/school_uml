@@ -3,15 +3,22 @@
  */
 package schooluml;
 
+import java.time.LocalDate;
+
 /**
  * 
  */
 public class Teacher extends Person {
 	private int id;
+	private LocalDate arrivalDate;
+	static int countId = 0;
 	/**
 	 * 
 	 */
 	public Teacher() {
+		super();
+		this.arrivalDate = LocalDate.now();
+		this.setId();
 	}
 
 	/**
@@ -21,9 +28,10 @@ public class Teacher extends Person {
 	 * @param planning
 	 * @param id
 	 */
-	public Teacher(String firstname, String lastName, int age, Planning planning, int id) {
+	public Teacher(String firstname, String lastName, int age, Planning planning, LocalDate arrivalDate) {
 		super(firstname, lastName, age, planning);
-		this.id = id;
+		this.arrivalDate = arrivalDate;
+		this.setId();
 	}
 
 	/**
@@ -31,12 +39,51 @@ public class Teacher extends Person {
 	 * @param lastName
 	 * @param age
 	 */
-	public Teacher(String firstname, String lastName, int age, int id) {
+	public Teacher(String firstname, String lastName, int age, LocalDate arrivalDate) {
 		super(firstname, lastName, age);
-		this.id = id;
+		this.arrivalDate = arrivalDate;
+		this.setId();
+	}
+
+	
+	/**
+	 * @return the arrivalDate
+	 */
+	public LocalDate getArrivalDate() {
+		return arrivalDate;
 	}
 
 	/**
+	 * @param arrivalDate the arrivalDate to set
+	 */
+	public void setArrivalDate(LocalDate arrivalDate) {
+		this.arrivalDate = arrivalDate;
+	}
+
+	@Override
+	public void participate() {
+		
+	}
+	
+	public void teach() {
+		
+	}
+	// Accesseurs
+    public int getCountId() {
+        /**
+         * @return countId
+         */
+        return countId;
+    }
+
+    public void setCountId() {
+        /**
+         * @param countId
+         */
+        countId = getCountId() + 1;
+    }
+    
+    /**
 	 * @return the id
 	 */
 	public int getId() {
@@ -46,16 +93,7 @@ public class Teacher extends Person {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-	
-	@Override
-	public void participate() {
-		
-	}
-	
-	public void teach() {
-		
+	public void setId() {
+		this.setCountId();
 	}
 }

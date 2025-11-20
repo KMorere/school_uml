@@ -4,12 +4,17 @@ package schooluml;
  * Class representing a student
  */
 public class Student extends Person {
+	
+
 	private int id;
+	static int countId = 0;
 	
 	/**
 	 * Constructor
 	 */
 	public Student() {
+		super();
+		this.setId();
 	}
 	
 	/**
@@ -20,9 +25,9 @@ public class Student extends Person {
 	 * @param planning
 	 * @param id
 	 */
-	public Student(String firstname, String lastName, int age, Planning planning, int id) {
+	public Student(String firstname, String lastName, int age, Planning planning) {
 		super(firstname, lastName, age, planning);
-		this.id = id;
+		this.setId();
 	}
 
 	/**
@@ -32,12 +37,39 @@ public class Student extends Person {
 	 * @param age
 	 * @param id
 	 */
-	public Student(String firstname, String lastName, int age, int id) {
+	public Student(String firstname, String lastName, int age) {
 		super(firstname, lastName, age);
-		this.id = id;
+		this.setId();
 	}
 
-	/**
+	
+
+	@Override
+	public void participate() {
+		
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [id=" + id + "]";
+	}
+	
+    // Accesseurs
+    public int getCountId() {
+        /**
+         * @return countId
+         */
+        return countId;
+    }
+
+    public void setCountId() {
+        /**
+         * @param countId
+         */
+        countId = getCountId() + 1;
+    }
+    
+    /**
 	 * @return the id
 	 */
 	public int getId() {
@@ -47,12 +79,7 @@ public class Student extends Person {
 	/**
 	 * @param id the id to set
 	 */
-	public void setId(int id) {
-		this.id = id;
-	}
-
-	@Override
-	public void participate() {
-		
+	public void setId() {
+		this.setCountId();
 	}
 }

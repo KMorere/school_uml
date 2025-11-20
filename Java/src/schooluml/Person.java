@@ -14,7 +14,7 @@ public abstract class Person {
 	 * Constructor
 	 */
 	Person() {
-
+		this.planning = new Planning();
 	}
 	
 	/**
@@ -117,4 +117,12 @@ public abstract class Person {
 	public void participate() {
 
 	}
+
+	@Override
+	public String toString() {
+		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", address=" + address
+				+ ", planning=" + planning + "]";
+	}
+	
+	
 }
