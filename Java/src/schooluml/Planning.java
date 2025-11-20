@@ -1,5 +1,7 @@
 package schooluml;
 
+import java.util.TreeMap;
+
 /**
  * Class representing a Planning
  */
@@ -9,15 +11,17 @@ public class Planning {
     private TreeMap<Date, Subject> planning;
 
     private static int countId = 0;
-
+    
+    public Planning() {
+    	
+    }
     // Constructeurs
-    public Planning(int id, Date date, Subject subject) {
+    public Planning(Date date, Subject subject) {
         /**
-         * @param id
          * @param date
          * @param subject
          */
-        setId(id);
+        this.setId();
         setPlanning(date, subject);
     }
 
@@ -48,7 +52,6 @@ public class Planning {
          * @param id
          */
         setCountId();
-        this.id = setCountId();
     }
 
     public TreeMap<Date, Subject> getPlanning() {
@@ -64,6 +67,6 @@ public class Planning {
          * @param subject
          */
         this.planning = new TreeMap<>();
-        this.planning.put(date, subject)
+        this.planning.put(date, subject);
     }
 }

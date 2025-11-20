@@ -1,6 +1,7 @@
+package schooluml;
 
 public class Address {
-    private int id;
+    //private int id;
     private City city;
     private String street;
     private String streetNumber;
