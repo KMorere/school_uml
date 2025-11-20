@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,3 +31,26 @@ public class School {
 	
 }
 
+=======
+/**
+ * 
+ */
+package schooluml;
+
+import java.util.List;
+
+/**
+ * 
+ */
+public class School{
+	private int id;
+	private List<Classroom> classrooms;
+	private Admin admin;
+	/**
+	 * 
+	 */
+	public School() {
+	}
+
+}
+>>>>>>> 0ef1627e32cad2424206dd1587934ca7d1967f1d
