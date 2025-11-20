@@ -1,9 +1,11 @@
-from typing import ClassVar
+from typing import ClassVar, Optional
 from abc import ABC
 from dataclasses import dataclass
 import uuid
 
-from Python.student import new_student
+from address import Address
+from planning import Planning
+
 
 
 @dataclass
@@ -22,7 +24,7 @@ class Person(ABC):
     # class attributes `person` that stores everyone
     persons_list: ClassVar[list["Person"]]
 
-    def __init__(self, first_name: str, last_name: str, age: int, address=None, planning=None):
+    def __init__(self, first_name: str, last_name: str, age: int, address: Optional[Address], planning: Optional[Planning]):
         """ Inits Person with provided data """
         self.first_name: str = first_name
         self.last_name: str = last_name
