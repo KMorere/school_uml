@@ -1,4 +1,5 @@
 from person import Person
+import school
 
 
 class Teacher(Person):
@@ -6,6 +7,7 @@ class Teacher(Person):
 
     def __init__(self, _first_name: str, _last_name: str, _age: int):
         super().__init__(_first_name, _last_name, _age, None, None)
+        school.School.add_teacher(self)
 
     def teach(self) -> None:
         super()
