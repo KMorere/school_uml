@@ -39,10 +39,9 @@ class Person(ABC):
         Person.persons_list.append(self)
 
 
-    @abc.abstractmethod
-    def participate(self) -> None:
+    def do_participate(self) -> None:
         """ This method will be implemented in Child classes """
-        pass
+        print(self.first_name + " is participating.")
 
 
     def __str__(self):

@@ -1,6 +1,7 @@
-from Python.person import Person
-from Python.address import Address
-from Python.city import City
+from participable import Participable
+from person import Person
+from address import Address
+from city import City
 
 
 class Student(Person):
@@ -12,15 +13,19 @@ class Student(Person):
 
 
     def participate(self) -> None:
-        return None
+        super()
 
 
-# new_address = Address(City("Toulouse", "France", "31100"),
-#                       "Chemin des martyrs de bordelongue",
-#                       "4",
-#                       "Deuxième étage")
-#
-#
-# new_student = Student("Matthieu", "Couderc", 39, new_address)
-#
-# print(new_student)
+def person_participate(_person: Participable):
+    _person.do_participate()
+
+
+new_address = Address(City("Toulouse", "France", "31100"),
+                      "Chemin des martyrs de bordelongue",
+                      "4",
+                      "Deuxième étage")
+
+
+new_student = Student("Matthieu", "Couderc", 39, new_address)
+person_participate(new_student)
+print(new_student)
