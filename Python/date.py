@@ -5,6 +5,7 @@ class Date :
         self.month:int = month
         self.year:int = year
 
+
     def __str__(self):
         return f"{self.day}/{self.month}/{self.year}"
 
