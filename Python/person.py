@@ -1,10 +1,9 @@
-import abc
 from typing import ClassVar
 from abc import ABC
 from dataclasses import dataclass
 import uuid
-from Python.address import Address
 
+from Python.student import new_student
 
 
 @dataclass
@@ -23,30 +22,32 @@ class Person(ABC):
     # class attributes `person` that stores everyone
     persons_list: ClassVar[list["Person"]]
 
-
-    def __init__(self, first_name: str, last_name: str, age: int, address: Address):  #type: ignore
+    def __init__(self, first_name: str, last_name: str, age: int, address=None, planning=None):
         """ Inits Person with provided data """
         self.first_name: str = first_name
         self.last_name: str = last_name
         self.age: int = age
-        self.address: Address = address
-        # self.planning: Planning = planning
+        self.address = address
+        self.planning = planning
         self.id: uuid.UUID = uuid.uuid4()
-
 
     def __post_init__(self):
         """ Add Person to `persons` list """
         Person.persons_list.append(self)
 
-
     def do_participate(self) -> None:
         """ This method will be implemented in Child classes """
         print(self.first_name + " is participating.")
 
+    def do_teach(self) -> None:
+        print(self.first_name + " is teaching.")
 
     def __str__(self):
         return (f"Student: "
+                f"\n[id:{self.id}]"
                 f"\n[{self.first_name} {self.last_name}],"
                 f"\n[{self.age} ans],"
                 f"\n{self.address.__str__()},"
                 )
+
+
