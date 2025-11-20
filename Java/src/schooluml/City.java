@@ -8,17 +8,13 @@ public class City {
     // Constructeurs
     public City() {}
 
-    public City(int id, String name, String country, String postalCode) {
-        this.id = id;
+    public City(String name, String country, String postalCode) {        
         this.name = name;
         this.country = country;
         this.postalCode = postalCode;
     }
 
-    // Getters et Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
+    // Getters et Setters 
     public String getName() { return name; }
     public void setName(String name) { this.name = name; }
 
@@ -30,6 +26,6 @@ public class City {
 
     @Override
     public String toString() {
-        return "City{id=" + id + ", name='" + name + "', country='" + country + "', postalCode='" + postalCode + "'}";
+        return "City{name='" + name + "', country='" + country + "', postalCode='" + postalCode + "'}";
     }
-}
+} 

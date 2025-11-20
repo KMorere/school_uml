@@ -9,8 +9,7 @@ public class Address {
     // Constructeurs
     public Address() {}
 
-    public Address(int id, City city, String street, String streetNumber, String additionalInfo) {
-        this.id = id;
+    public Address(City city, String street, String streetNumber, String additionalInfo) {        
         this.city = city;
         this.street = street;
         this.streetNumber = streetNumber;
@@ -18,9 +17,6 @@ public class Address {
     }
 
     // Getters et Setters
-    public int getId() { return id; }
-    public void setId(int id) { this.id = id; }
-
     public City getCity() { return city; }
     public void setCity(City city) { this.city = city; }
 
@@ -35,7 +31,7 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{id=" + id + ", street='" + street + "', streetNumber='" + streetNumber +
+        return "Address{street='" + street + "', streetNumber='" + streetNumber +
                "', additionalInfo='" + additionalInfo + "', city=" + city + "}";
     }
 }
