@@ -69,7 +69,7 @@ package Class {
 
     class Planning {
         +id: Int
-        +planning: Collection<Date, Subject>
+        +planning: Collection<Date, List<Subject>>
     }
 
     class Date {
@@ -100,14 +100,14 @@ Person::planning "1" *-right-- "1..n" Planning
 '==> Bloc autour de Address
 Address::city "1..n" o-right- "1" City
 '==> Bloc autour de Admin
-School::admin -left- Admin
+School::admin "1" -left- "1" Admin
 '==> Bloc autour de School
 School::classroom "1" *-right- "1..n" Classroom
 '==> Bloc autour de Planning
-Planning::planning -down- Subject
-Planning::planning -down- Date
+Planning::planning "1" -down- "0..n" Subject
+Planning::planning "1" -down- "0..n" Date
 '==> Bloc autour de Subject
-Subject *-right- Date
+Subject "1..n" -right-* "1..n" Date
 
 
 @enduml
