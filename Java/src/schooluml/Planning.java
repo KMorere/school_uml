@@ -1,7 +1,6 @@
 package schooluml;
 
 import java.util.ArrayList;
-import java.util.List;
 import java.util.TreeMap;
 
 /**
@@ -10,7 +9,7 @@ import java.util.TreeMap;
 public class Planning {
     // Atributs
     private int id;
-    private TreeMap<Date, List<Subject>> planning = new TreeMap<>();
+    private TreeMap<Date, ArrayList<Subject>> planning = new TreeMap<>();
 
     private static int countId = 0;
 
@@ -50,7 +49,7 @@ public class Planning {
     /**
      * @return planning
      */
-    public TreeMap<Date, List<Subject>> getPlanning() {
+    public TreeMap<Date, ArrayList<Subject>> getPlanning() {
     	return this.planning;
     }
 
