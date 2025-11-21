@@ -2,6 +2,7 @@ from city import City
 
 
 class Address:
+    """ Create a new address asking for a City and street information. """
     def __init__(self, city: City, street: str, street_number: str, additionnal_info: str):
         self.city = city
         self.street = street
@@ -13,4 +14,3 @@ class Address:
                 f"\n[{self.city}], "
                 f"\n[{self.street_number} {self.street}], "
                 f"\n[{self.additionnal_info}]")
-

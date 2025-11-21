@@ -2,10 +2,8 @@ from typing import ClassVar, Optional
 from abc import ABC
 from dataclasses import dataclass
 import uuid
-
 from address import Address
 from planning import Planning
-
 
 
 @dataclass
@@ -19,13 +17,16 @@ class Person(ABC):
          first_name
          last_name
          age
-         address: an Adress Object with a City inside it
+         address: the Address of the person with a City inside
+         planning: the person's Planning with all Subject and Date inside
      """
+
     # class attributes `person` that stores everyone
     persons_list: ClassVar[list["Person"]]
 
-    def __init__(self, first_name: str, last_name: str, age: int, address: Optional[Address], planning: Optional[Planning]):
-        """ Inits Person with provided data """
+    def __init__(self, first_name: str, last_name: str, age: int, address: Optional[Address],
+                 planning: Optional[Planning]):
+        """ Init Person with provided data """
         self.first_name: str = first_name
         self.last_name: str = last_name
         self.age: int = age
@@ -38,11 +39,12 @@ class Person(ABC):
         Person.persons_list.append(self)
 
     def do_participate(self) -> None:
-        """ This method will be implemented in Child classes """
+        """ Implements defined Protocol Participable """
         print(self.first_name + " is participating.")
 
     def do_teach(self) -> None:
-        print(self.first_name + " is teaching.")
+        """ Implements defined Protocol Educator """
+        print(self.first_name + " is educating.")
 
     def __str__(self):
         return (f"Student: "
@@ -52,4 +54,16 @@ class Person(ABC):
                 f"\n{self.address.__str__()},"
                 )
 
+    def set_planning(self, _planning: Planning) -> None:
+        """ Cheks validity of Planning type and add it to the `planning` attribute """
+        if isinstance(Planning, type(_planning)):
+            self.planning = _planning
+        else:
+            print("Error: Planning is invalid.")
 
+    def set_address(self, _address: Address) -> None:
+        """ Cheks validity of Address type and add it to the `address` attribute """
+        if isinstance(Address, type(_address)):
+            self.address = _address
+        else:
+            print("Error : Address is invalid.")

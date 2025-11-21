@@ -1,5 +1,5 @@
 class City:
-
+    """ Create a new City with a name, country and postal code. """
     def __init__(self, name: str, country: str, postal_code: str):
         self.name = name
         self.country = country

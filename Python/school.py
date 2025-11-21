@@ -1,9 +1,12 @@
 from classroom import Classroom
 from teacher import Teacher
 from student import Student
+import admin
+
 
 class School:
-    admin: str = "" # TODO:Implement the Admin class.
+    """ Create a new School with a unique admin, a list of students, teachers and rooms. """
+    admin: admin.Admin
     classrooms: list[Classroom] = []
     teachers: list[Teacher] = []
     students: list[Student] = []
