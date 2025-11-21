@@ -78,7 +78,7 @@ public class Admin extends Person {
 	 */
 	@Override
 	public String toString() {
-		return "\n School : " + school + "\n Firstname : " + getFirstName() + "\n Lastame : " + getLastName()
+		return "\n Firstname : " + getFirstName() + "\n Lastame : " + getLastName()
 				+ "\n Age : " + getAge() + "\n Address : " + getAddress() + "\n Planning : " + getPlanning();
 	}
 	

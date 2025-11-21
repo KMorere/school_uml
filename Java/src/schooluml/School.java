@@ -47,7 +47,7 @@ public class School {
 	// Représentation textuelle de l'objet School.
 	@Override
 	public String toString() {
-		return "School{classrooms=" + classrooms + ", admin=" + admin + "}";
+		return "School : " + classrooms + ", admin=" + admin + "}";
 	}
 
 }

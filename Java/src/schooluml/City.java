@@ -68,7 +68,7 @@ public class City {
      */
     @Override
     public String toString() {
-        return "City{name='" + name + "', country='" + country + "', postalCode='" + postalCode + "'}";
+        return "\n City : " + name + "\n Country : " + country + "\n Postal code : " + postalCode;
     }
 } 
 
