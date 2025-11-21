@@ -63,7 +63,7 @@ public class Address {
     // Représentation textuelle de l'adresse.
     @Override
     public String toString() {
-        return "Address{street='" + street + "', streetNumber='" + streetNumber +
-               "', additionalInfo='" + additionalInfo + "', city=" + city + "}";
+        return "\n Address : " + street + "\n streetNumber : " + streetNumber +
+               "\n additional informations : " + additionalInfo + city;
     }
 }

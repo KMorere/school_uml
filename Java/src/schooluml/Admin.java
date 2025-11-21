@@ -25,7 +25,7 @@ public class Admin extends Person {
 	 * @param planning to set 
 	 * @param school to set
 	 */
-	public Admin(String firstname, String lastName, int age, String address, Planning planning, School school) {
+	public Admin(String firstname, String lastName, int age, Address address, Planning planning, School school) {
 		super(firstname, lastName, age, address, planning);
 		this.school = school;
 	}
@@ -37,7 +37,7 @@ public class Admin extends Person {
 	 * @param age to set
 	 * @param school to set
 	 */
-	public Admin(String firstname, String lastName, int age, String address, School school) {
+	public Admin(String firstname, String lastName, int age, Address address, School school) {
 		super(firstname, lastName, age, address);
 		this.school = school;
 	}
@@ -78,7 +78,7 @@ public class Admin extends Person {
 	 */
 	@Override
 	public String toString() {
-		return "\n School : " + school + "\n Firstname : " + getFirstName() + "\n Lastame : " + getLastName()
+		return "\n Firstname : " + getFirstName() + "\n Lastame : " + getLastName()
 				+ "\n Age : " + getAge() + "\n Address : " + getAddress() + "\n Planning : " + getPlanning();
 	}
 	

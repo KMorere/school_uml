@@ -7,7 +7,7 @@ public abstract class Person {
 	private String firstName;
 	private String lastName;
 	private int age;
-	private String address;
+	private Address address;
 	private Planning planning;
 
 	/**
@@ -17,7 +17,7 @@ public abstract class Person {
 		this.setFirstName("");
 		this.setLastName("");
 		this.setAge(0);
-		this.setAddress("");
+		this.address = new Address();
 		this.planning = new Planning();
 	}
 	
@@ -28,7 +28,7 @@ public abstract class Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	public Person(String firstname, String lastName, int age, String address,  Planning planning) {
+	public Person(String firstname, String lastName, int age, Address address,  Planning planning) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
@@ -42,7 +42,7 @@ public abstract class Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	public Person(String firstname, String lastName, int age, String address) {
+	public Person(String firstname, String lastName, int age, Address address) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
@@ -102,7 +102,7 @@ public abstract class Person {
 	 * Get the address
 	 * @return the address
 	 */
-	public String getAddress() {
+	public Address getAddress() {
 		return address;
 	}
 
@@ -110,7 +110,7 @@ public abstract class Person {
 	 * Set the address
 	 * @param address the address to set
 	 */
-	public void setAddress(String address) {
+	public void setAddress(Address address) {
 		this.address = address;
 	}
 	
