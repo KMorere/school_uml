@@ -1,5 +1,7 @@
 package schooluml;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeMap;
 
 /**
@@ -48,7 +50,9 @@ public class Planning {
     /**
      * @return planning
      */
-    public TreeMap<Date, Subject> getPlanning() {return this.planning;}
+    public TreeMap<Date, List<Subject>> getPlanning() {
+    	return this.planning;
+    }
 
     /**
      * @param date
