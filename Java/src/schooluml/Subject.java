@@ -14,13 +14,13 @@ public class Subject {
     private static int countId = 0;
 
     // Constructeurs
+    /**
+     * @param id
+     * @param name
+     * @param startDate
+     * @param endDate
+     */
     public Subject(int id, String name, Date startDate, Date endDate){
-        /**
-         * @param id
-         * @param name
-         * @param startDate
-         * @param endDate
-         */
         setId();
         setName(name);
         setStartDate(startDate);
@@ -28,74 +28,53 @@ public class Subject {
     }
 
     // Accesseurs
-    public int getCountId() {
-        /**
-         * @return countId
-         */
-        return countId;
-    }
+    /**
+     * @return countId
+     */
+    public int getCountId() {return countId;}
 
-    public void setCountId() {
-        /**
-         * @param countId
-         */
-        countId = getCountId() + 1;
-    }
+    /**
+     * @param countId
+     */
+    public void setCountId() {countId = getCountId() + 1;}
 
-    public int getId() {
-        /**
-         * @return id
-         */
-        return this.id;
-    }
+    /**
+     * @return id
+     */
+    public int getId() {return this.id;}
 
-    public void setId() {
-        /**
-         * @param id
-         */
-        setCountId();
-        this.id = getCountId();
-    }
+    /**
+     * @param id
+     */
+    public void setId() {setCountId(); this.id = getCountId();}
 
-    public String getName() {
-        /**
-         * @return name
-         */
-        return this.name;
-    }
+    /**
+     * @return name
+     */
+    public String getName() {return this.name;}
 
-    public void setName(String name) {
-        /**
-         * @param name
-         */
-        this.name = name;
-    }
+    /**
+     * @param name
+     */
+    public void setName(String name) {this.name = name;}
 
-    public Date getStartDate() {
-        /**
-         * @return startDate
-         */
-        return this.startDate;
-    }
+    /**
+     * @return startDate
+     */
+    public Date getStartDate() {return this.startDate;}
 
-    public void setStartDate(Date startDate) {
-        /**
-         * @param startDate
-         */
-        this.startDate = startDate;
-    }
+    /**
+     * @param startDate
+     */
+    public void setStartDate(Date startDate) {this.startDate = startDate;}
 
-    public Date getEndDate() {
-        /**
-         * @return endDate
-         */
-        return this.endDate;
-    }
+    /**
+     * @return endDate
+     */
+    public Date getEndDate() {return this.endDate;}
 
-    public void setEndDate(Date endDate) {
-        /**
-         * @param endDate
-         */
-        this.endDate = endDate;
-    }
+    /**
+     * @param endDate
+     */
+    public void setEndDate(Date endDate) {this.endDate = endDate;}
 }

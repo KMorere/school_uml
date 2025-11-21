@@ -8,64 +8,57 @@ import java.util.TreeMap;
 public class Planning {
     // Atributs
     private int id;
-    private TreeMap<Date, Subject> planning;
+    private TreeMap<Date, List<Subject>> planning = new TreeMap<>();
 
     private static int countId = 0;
 
     // Constructeurs
     public Planning() {}
 
+    /**
+     * @param date
+     * @param subject
+     */
     public Planning(Date date, Subject subject) {
-        /**
-         * @param date
-         * @param subject
-         */
         this.setId();
         setPlanning(date, subject);
     }
 
     // Accesseurs
-    public int getCountId() {
-        /**
-         * @return countId
-         */
-        return countId;
-    }
+    /**
+     * @return countId
+     */
+    public int getCountId() {return countId;}
 
-    public void setCountId() {
-        /**
-         * @param countId
-         */
-        countId = getCountId() + 1;
-    }
+    /**
+     * @param countId
+     */
+    public void setCountId() {countId = getCountId() + 1;}
 
-    public int getId() {
-        /**
-         * @return id
-         */
-        return this.id;
-    }
+    /**
+     * @return id
+     */
+    public int getId() {return this.id;}
 
-    public void setId() {
-        /**
-         * @param id
-         */
-        setCountId();
-    }
+    /**
+     * @param id
+     */
+    public void setId() {setCountId();}
 
-    public TreeMap<Date, Subject> getPlanning() {
-        /**
-         * @return planning
-         */
-        return this.planning;
-    }
+    /**
+     * @return planning
+     */
+    public TreeMap<Date, Subject> getPlanning() {return this.planning;}
 
+    /**
+     * @param date
+     * @param subject
+     */
     public void setPlanning(Date date, Subject subject) {
-        /**
-         * @param date
-         * @param subject
-         */
-        this.planning = new TreeMap<>();
-        this.planning.put(date, subject);
+        // Si la date n'est pas encore dans la liste, on la crér:
+        planning.putIfAbsent(date, new ArrayList<>());
+
+        // Ajout de la date et du subject:
+        planning.get(date).add(subject);
     }
 }
