@@ -58,7 +58,7 @@ public class Planning {
      * @param subject
      */
     public void setPlanning(Date date, Subject subject) {
-        // Si la date n'est pas encore dans la liste, on la crér:
+        // Si la date n'est pas encore dans la liste, on l'a créé :
         planning.putIfAbsent(date, new ArrayList<>());
 
         // Ajout de la date et du subject:
