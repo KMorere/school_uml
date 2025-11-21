@@ -7,13 +7,13 @@ public class Date {
     // Atributs
     private int id;
     private int numberDay;
-    private String month;
+    private int month;
     private int year;
 
     private static int countId = 0;
 
     // Constructeurs
-    public Date(int id, int numberDay, String month, int year){
+    public Date(int id, int numberDay, int month, int year){
         /**
          * @param id
          * @param numberDay
@@ -70,14 +70,14 @@ public class Date {
         this.numberDay = numberDay;
     }
 
-    public String getMonth() {
+    public int getMonth() {
         /**
          * @return month
          */
         return this.month;
     }
 
-    public void setMonth(String month) {
+    public void setMonth(int month) {
         /**
          * @param month
          */
