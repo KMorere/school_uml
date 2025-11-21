@@ -4,23 +4,26 @@
 package schooluml;
 
 /**
- * 
+ * Class to represent an administrator of the system (can teach as well)
  */
 public class Admin extends Person {
 	private School school;
+	
 	/**
-	 * 
+	 * Constructor 
 	 */
 	public Admin() {
+		super();
 		this.school = new School();
 	}
 
 	/**
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param planning
-	 * @param school
+	 * Constructor with all parameters
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
+	 * @param planning to set 
+	 * @param school to set
 	 */
 	public Admin(String firstname, String lastName, int age, Planning planning, School school) {
 		super(firstname, lastName, age, planning);
@@ -28,10 +31,11 @@ public class Admin extends Person {
 	}
 
 	/**
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param school
+	 * Constructor with all parameters except for planning
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
+	 * @param school to set
 	 */
 	public Admin(String firstname, String lastName, int age, School school) {
 		super(firstname, lastName, age);
@@ -39,6 +43,7 @@ public class Admin extends Person {
 	}
 
 	/**
+	 * Get the school
 	 * @return the school
 	 */
 	public School getSchool() {
@@ -46,17 +51,24 @@ public class Admin extends Person {
 	}
 
 	/**
+	 * Set the school
 	 * @param school the school to set
 	 */
 	public void setSchool(School school) {
 		this.school = school;
 	}
 	
+	/**
+	 * Override the participate method
+	 */
 	@Override
 	public void participate() {
 		
 	}
 	
+	/**
+	 * Add the teach method
+	 */
 	public void teach() {
 		
 	}

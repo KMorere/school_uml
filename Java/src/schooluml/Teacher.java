@@ -6,14 +6,15 @@ package schooluml;
 import java.time.LocalDate;
 
 /**
- * 
+ * Class representing a teacher
  */
 public class Teacher extends Person {
 	private int id;
 	private LocalDate arrivalDate;
 	static int countId = 0;
+	
 	/**
-	 * 
+	 * Constructor 
 	 */
 	public Teacher() {
 		super();
@@ -22,11 +23,11 @@ public class Teacher extends Person {
 	}
 
 	/**
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param planning
-	 * @param id
+	 * Constructor with all parameters (with id generated automatically)
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
+	 * @param planning to set
 	 */
 	public Teacher(String firstname, String lastName, int age, Planning planning, LocalDate arrivalDate) {
 		super(firstname, lastName, age, planning);
@@ -35,9 +36,10 @@ public class Teacher extends Person {
 	}
 
 	/**
-	 * @param firstname
-	 * @param lastName
-	 * @param age
+	 * Constructor with all parameters except for planning)
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
 	 */
 	public Teacher(String firstname, String lastName, int age, LocalDate arrivalDate) {
 		super(firstname, lastName, age);
@@ -47,6 +49,7 @@ public class Teacher extends Person {
 
 	
 	/**
+	 * Get the arrival date attribute
 	 * @return the arrivalDate
 	 */
 	public LocalDate getArrivalDate() {
@@ -54,36 +57,45 @@ public class Teacher extends Person {
 	}
 
 	/**
+	 * Set the arrival date attribute
 	 * @param arrivalDate the arrivalDate to set
 	 */
 	public void setArrivalDate(LocalDate arrivalDate) {
 		this.arrivalDate = arrivalDate;
 	}
 
+	/**
+	 * Overrides the participate method
+	 */
 	@Override
 	public void participate() {
 		
 	}
 	
+	/**
+	 * Method to indicates what the teacher teaches
+	 */
 	public void teach() {
 		
 	}
-	// Accesseurs
+
+	/**
+	 * Get count id
+	 * @return count id
+	 */
     public int getCountId() {
-        /**
-         * @return countId
-         */
         return countId;
     }
 
+    /**
+	 * Set count id (automatically)
+	 */
     public void setCountId() {
-        /**
-         * @param countId
-         */
         countId = getCountId() + 1;
     }
     
     /**
+     * Get the id
 	 * @return the id
 	 */
 	public int getId() {
@@ -91,7 +103,7 @@ public class Teacher extends Person {
 	}
 
 	/**
-	 * @param id the id to set
+	 * Set the id (automatically)
 	 */
 	public void setId() {
 		this.setCountId();

@@ -14,15 +14,19 @@ public abstract class Person {
 	 * Constructor
 	 */
 	Person() {
+		this.setFirstName("");
+		this.setLastName("");
+		this.setAge(0);
+		this.setAddress("");
 		this.planning = new Planning();
 	}
 	
 	/**
 	 * Constructor with all parameters
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param planning
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
+	 * @param planning to set
 	 */
 	Person(String firstname, String lastName, int age, Planning planning) {
 		this.firstName = firstname;
@@ -33,9 +37,9 @@ public abstract class Person {
 	
 	/**
 	 * Constructor with all parameters minus planning
-	 * @param firstname
-	 * @param lastName
-	 * @param age
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
 	 */
 	Person(String firstname, String lastName, int age) {
 		this.firstName = firstname;
@@ -45,6 +49,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Get the firstname
 	 * @return the firstName
 	 */
 	public String getFirstName() {
@@ -52,6 +57,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Set the firstname
 	 * @param firstName the firstName to set
 	 */
 	public void setFirstName(String firstName) {
@@ -59,6 +65,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Get the lastname
 	 * @return the lastName
 	 */
 	public String getLastName() {
@@ -66,6 +73,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Set the lastname
 	 * @param lastName the lastName to set
 	 */
 	public void setLastName(String lastName) {
@@ -73,6 +81,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Get the age
 	 * @return the age
 	 */
 	public int getAge() {
@@ -80,6 +89,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Set the age
 	 * @param age the age to set
 	 */
 	public void setAge(int age) {
@@ -87,6 +97,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Get the address
 	 * @return the address
 	 */
 	public String getAddress() {
@@ -94,6 +105,7 @@ public abstract class Person {
 	}
 
 	/**
+	 * Set the address
 	 * @param address the address to set
 	 */
 	public void setAddress(String address) {
@@ -101,23 +113,31 @@ public abstract class Person {
 	}
 	
 	/**
-	 * @return the address
+	 * Get the planning
+	 * @return the planning
 	 */
 	public Planning getPlanning() {
 		return this.planning;
 	}
 
 	/**
-	 * @param address the address to set
+	 * Get the planning
+	 * @param planning the planning to set
 	 */
 	public void setPlanning(Planning planning) {
 		this.planning = planning;
 	}
-
+	
+	/**
+	 * Function to indicate that a Person participates at the subject
+	 */
 	public void participate() {
 
 	}
-
+	/**
+	 * Returns the string to display with System.out.println method
+	 * @return the string to display
+	 */
 	@Override
 	public String toString() {
 		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", address=" + address
