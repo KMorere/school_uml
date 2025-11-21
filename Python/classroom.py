@@ -1,6 +1,8 @@
 import school
 
+
 class Classroom:
+    """ Create a Classroom for a school. """
     def __init__(self, _name: str, _size: int):
         self.name = _name
         self.size = _size
