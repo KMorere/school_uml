@@ -4,7 +4,7 @@ package schooluml;
  * Class representing a Date
  */
 public class Date {
-    // Atributs
+    // Attributes
     private int id;
     private int numberDay;
     private int month;
@@ -14,7 +14,6 @@ public class Date {
 
     // Constructeurs
     /**
-     * @param id
      * @param numberDay
      * @param month
      * @param year
@@ -32,9 +31,6 @@ public class Date {
      */
     public int getCountId() {return countId;}
 
-    /**
-     * @param countId
-     */
     public void setCountId() {countId = getCountId() + 1;}
 
     /**
@@ -42,10 +38,9 @@ public class Date {
      */
     public int getId() {return this.id;}
 
-    /**
-     * @param id
-     */
-    public void setId() {setCountId(); this.id = getCountId();}
+    public void setId() {
+        setCountId();
+        this.id = getCountId();}
 
     /**
      * @return numberDay
@@ -76,4 +71,9 @@ public class Date {
      * @param year
      */
     public void setYear(int year) {this.year = year;}
+
+    @Override
+    public String toString() {
+        return "Date(" + this.numberDay + "/" + this.month + "/" + this.year + ")";
+    }
 }

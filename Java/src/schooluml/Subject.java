@@ -15,12 +15,11 @@ public class Subject {
 
     // Constructeurs
     /**
-     * @param id
      * @param name
      * @param startDate
      * @param endDate
      */
-    public Subject(int id, String name, Date startDate, Date endDate){
+    public Subject(String name, Date startDate, Date endDate){
         setId();
         setName(name);
         setStartDate(startDate);
@@ -77,4 +76,9 @@ public class Subject {
      * @param endDate
      */
     public void setEndDate(Date endDate) {this.endDate = endDate;}
+
+    @Override
+    public String toString() {
+        return "Subject(" + this.name + "-" + this.startDate + "-" + this.endDate + ")";
+    }
 }
