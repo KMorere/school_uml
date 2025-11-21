@@ -7,6 +7,7 @@ class Teacher(Person):
 
     def __init__(self, _first_name: str, _last_name: str, _age: int):
         super().__init__(_first_name, _last_name, _age, None, None)
+        self.startDate = "21/11/2025"
         school.School.add_teacher(self)
 
     def __str__(self):
