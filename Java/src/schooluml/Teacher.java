@@ -29,7 +29,7 @@ public class Teacher extends Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	public Teacher(String firstname, String lastName, int age, String address, Planning planning, LocalDate arrivalDate) {
+	public Teacher(String firstname, String lastName, int age, Address address, Planning planning, LocalDate arrivalDate) {
 		super(firstname, lastName, age, address, planning);
 		this.arrivalDate = arrivalDate;
 		this.setId();
@@ -41,7 +41,7 @@ public class Teacher extends Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	public Teacher(String firstname, String lastName, int age, String address, LocalDate arrivalDate) {
+	public Teacher(String firstname, String lastName, int age, Address address, LocalDate arrivalDate) {
 		super(firstname, lastName, age, address);
 		this.arrivalDate = arrivalDate;
 		this.setId();
