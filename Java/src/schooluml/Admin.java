@@ -72,4 +72,16 @@ public class Admin extends Person {
 	public void teach() {
 		
 	}
+	
+	/**
+	 * Overrides toString method
+	 */
+	@Override
+	public String toString() {
+		return "Admin [school=" + school + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName()
+				+ ", getAge()=" + getAge() + ", getAddress()=" + getAddress() + ", getPlanning()=" + getPlanning()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+	
 }

@@ -52,10 +52,7 @@ public class Student extends Person {
 	/**
 	 * Overrides the toString method
 	 */
-	@Override
-	public String toString() {
-		return "Student [id=" + id + "]";
-	}
+	
 	
     /**
      * Get countId
@@ -65,7 +62,15 @@ public class Student extends Person {
         return countId;
     }
 
-    /**
+    @Override
+	public String toString() {
+		return "Student [id=" + id + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName()
+				+ ", getAge()=" + getAge() + ", getAddress()=" + getAddress() + ", getPlanning()=" + getPlanning()
+				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
+				+ "]";
+	}
+
+	/**
      * Set countId (generated automatically)
      */
     public void setCountId() {

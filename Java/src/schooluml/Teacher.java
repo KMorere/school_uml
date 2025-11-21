@@ -108,4 +108,12 @@ public class Teacher extends Person {
 	public void setId() {
 		this.setCountId();
 	}
+
+	@Override
+	public String toString() {
+		return "Teacher [id=" + id + ", arrivalDate=" + arrivalDate + ", getFirstName()=" + getFirstName()
+				+ ", getLastName()=" + getLastName() + ", getAge()=" + getAge() + ", getAddress()=" + getAddress()
+				+ ", getPlanning()=" + getPlanning() + ", toString()=" + super.toString() + ", getClass()=" + getClass()
+				+ ", hashCode()=" + hashCode() + "]";
+	}
 }
