@@ -13,13 +13,13 @@ public class Date {
     private static int countId = 0;
 
     // Constructeurs
+    /**
+     * @param id
+     * @param numberDay
+     * @param month
+     * @param year
+     */
     public Date(int id, int numberDay, int month, int year){
-        /**
-         * @param id
-         * @param numberDay
-         * @param month
-         * @param year
-         */
         setId();
         setNumberDay(numberDay);
         setMonth(month);
@@ -27,74 +27,53 @@ public class Date {
     }
 
     // Accesseurs
-    public int getCountId() {
-        /**
-         * @return countId
-         */
-        return countId;
-    }
+    /**
+     * @return countId
+     */
+    public int getCountId() {return countId;}
 
-    public void setCountId() {
-        /**
-         * @param countId
-         */
-        countId = getCountId() + 1;
-    }
+    /**
+     * @param countId
+     */
+    public void setCountId() {countId = getCountId() + 1;}
 
-    public int getId() {
-        /**
-         * @return id
-         */
-        return this.id;
-    }
+    /**
+     * @return id
+     */
+    public int getId() {return this.id;}
 
-    public void setId() {
-        /**
-         * @param id
-         */
-        setCountId();
-        this.id = getCountId();
-    }
+    /**
+     * @param id
+     */
+    public void setId() {setCountId(); this.id = getCountId();}
 
-    public int getNumberDay() {
-        /**
-         * @return numberDay
-         */
-        return this.numberDay;
-    }
+    /**
+     * @return numberDay
+     */
+    public int getNumberDay() {return this.numberDay;}
 
-    public void setNumberDay(int numberDay) {
-        /**
-         * @param numberDay
-         */
-        this.numberDay = numberDay;
-    }
+    /**
+     * @param numberDay
+     */
+    public void setNumberDay(int numberDay) {this.numberDay = numberDay;}
 
-    public int getMonth() {
-        /**
-         * @return month
-         */
-        return this.month;
-    }
+    /**
+     * @return month
+     */
+    public int getMonth() {return this.month;}
 
-    public void setMonth(int month) {
-        /**
-         * @param month
-         */
-        this.month = month;
-    }
+    /**
+     * @param month
+     */
+    public void setMonth(int month) {this.month = month;}
 
-    public int getYear() {
-        /**
-         * @return year
-         */
-        return this.year;
-    }
+    /**
+     * @return year
+     */
+    public int getYear() {return this.year;}
 
-    public void setYear(int year) {
-        /**
-         * @param year
-         */
-        this.year = year;
-    }
+    /**
+     * @param year
+     */
+    public void setYear(int year) {this.year = year;}
 }
