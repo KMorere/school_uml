@@ -13,7 +13,7 @@ public abstract class Person {
 	/**
 	 * Constructor
 	 */
-	Person() {
+	public Person() {
 		this.setFirstName("");
 		this.setLastName("");
 		this.setAge(0);
@@ -28,7 +28,7 @@ public abstract class Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	Person(String firstname, String lastName, int age, Planning planning) {
+	public Person(String firstname, String lastName, int age, Planning planning) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
@@ -41,7 +41,7 @@ public abstract class Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	Person(String firstname, String lastName, int age) {
+	public Person(String firstname, String lastName, int age) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
