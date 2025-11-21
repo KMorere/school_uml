@@ -11,11 +11,10 @@ public class Planning {
     private TreeMap<Date, Subject> planning;
 
     private static int countId = 0;
-    
-    public Planning() {
-    	
-    }
+
     // Constructeurs
+    public Planning() {}
+
     public Planning(Date date, Subject subject) {
         /**
          * @param date
