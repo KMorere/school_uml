@@ -1,21 +1,41 @@
 package schooluml;
 import java.util.ArrayList;
 
-public class Classroom {
-	private int id;
+/**
+ * La classe Classroom représente une salle de classe.
+ * Elle contient un nom, une capacité une liste de personnes (Person) et un identifiant unique généré automatiquement.
+ */
+public class Classroom {	
+	
+	// Nom de la salle.
 	private String name;
+	
+	// Taille maximale ou capacité de la salle.
 	private int size;
+	
+	// Liste des personnes appartenant à cette salle.
 	private ArrayList<Person> person;
+	
+	// Compteur statique permettant de générer des IDs uniques.
 	private static int countId = 0;
 	
-	// Constructeurs
+	/**
+	 * Constructeur par défaut.
+	 * Initialise la liste des personnes
+	 */
 	public Classroom() {
 		this.person = new ArrayList<Person>();
 	}
 	
+	/**
+	 * Constructeur avec nom et taille.
+	 * @param name Nom de la salle
+	 * @param size Capacité de la salle
+	 */	
 	public Classroom(String name, int size) {
 		this.name = name;
-		this.size = size;		
+		this.size = size;
+		this.person = new ArrayList<>();
 	}
 	
 	// Getters et Setters
