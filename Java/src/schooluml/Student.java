@@ -19,11 +19,10 @@ public class Student extends Person {
 	
 	/**
 	 * Constructor with all parameters
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param planning
-	 * @param id
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
+	 * @param planning to set
 	 */
 	public Student(String firstname, String lastName, int age, Planning planning) {
 		super(firstname, lastName, age, planning);
@@ -32,10 +31,9 @@ public class Student extends Person {
 
 	/**
 	 * Constructor with all parameters minus planning
-	 * @param firstname
-	 * @param lastName
-	 * @param age
-	 * @param id
+	 * @param firstname to set
+	 * @param lastName to set
+	 * @param age to set
 	 */
 	public Student(String firstname, String lastName, int age) {
 		super(firstname, lastName, age);
@@ -43,41 +41,47 @@ public class Student extends Person {
 	}
 
 	
-
+	/**
+	 * Overrides the participate method
+	 */
 	@Override
 	public void participate() {
 		
 	}
 	
+	/**
+	 * Overrides the toString method
+	 */
 	@Override
 	public String toString() {
 		return "Student [id=" + id + "]";
 	}
 	
-    // Accesseurs
+    /**
+     * Get countId
+     * @return countId
+     */
     public int getCountId() {
-        /**
-         * @return countId
-         */
         return countId;
     }
 
+    /**
+     * Set countId (generated automatically)
+     */
     public void setCountId() {
-        /**
-         * @param countId
-         */
         countId = getCountId() + 1;
     }
     
     /**
-	 * @return the id
-	 */
+     * Get Id
+     * @return id
+     */
 	public int getId() {
 		return id;
 	}
 
 	/**
-	 * @param id the id to set
+	 * Set the id (automatically)
 	 */
 	public void setId() {
 		this.setCountId();

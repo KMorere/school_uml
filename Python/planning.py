@@ -5,13 +5,15 @@ from date import Date
 class Planning:
     week_days: list[str] = ["Lundi", "Mardi", "Mercredi", "Jeudi", "Vendredi", "Samedi", "Dimanche"]
     # dict clé date et contient list subject
-    planning: dict[str, list[Subject]] = {}
+    planning_list: dict[str, list[Subject]] = {}
 
+    #constructor
     def __init__(self, date: Date, subject_list: list[Subject]):
         self.date = date
         self.subject_list: list[Subject] = subject_list
-        Planning.planning.update({str(date): subject_list})
+        Planning.planning_list.update({str(date): subject_list})
 
+    #display
     def __str__(self):
         # "map(str," is just to translate data on the console
         return f"{self.date} / {list(map(str,self.subject_list))}"
