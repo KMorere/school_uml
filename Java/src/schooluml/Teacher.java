@@ -11,7 +11,7 @@ import java.time.LocalDate;
 public class Teacher extends Person {
 	private int id;
 	private LocalDate arrivalDate;
-	static int countId = 0;
+	static int countId;
 	
 	/**
 	 * Constructor 
@@ -29,8 +29,8 @@ public class Teacher extends Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	public Teacher(String firstname, String lastName, int age, Planning planning, LocalDate arrivalDate) {
-		super(firstname, lastName, age, planning);
+	public Teacher(String firstname, String lastName, int age, String address, Planning planning, LocalDate arrivalDate) {
+		super(firstname, lastName, age, address, planning);
 		this.arrivalDate = arrivalDate;
 		this.setId();
 	}
@@ -41,8 +41,8 @@ public class Teacher extends Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	public Teacher(String firstname, String lastName, int age, LocalDate arrivalDate) {
-		super(firstname, lastName, age);
+	public Teacher(String firstname, String lastName, int age, String address, LocalDate arrivalDate) {
+		super(firstname, lastName, age, address);
 		this.arrivalDate = arrivalDate;
 		this.setId();
 	}
@@ -111,9 +111,8 @@ public class Teacher extends Person {
 
 	@Override
 	public String toString() {
-		return "Teacher [id=" + id + ", arrivalDate=" + arrivalDate + ", getFirstName()=" + getFirstName()
-				+ ", getLastName()=" + getLastName() + ", getAge()=" + getAge() + ", getAddress()=" + getAddress()
-				+ ", getPlanning()=" + getPlanning() + ", toString()=" + super.toString() + ", getClass()=" + getClass()
-				+ ", hashCode()=" + hashCode() + "]";
+		return " Firstname : " + getFirstName()
+				+ "\n Lastname : " + getLastName() + "\n Id : " + id + "\n Arrival date : " + arrivalDate +  "\n Age : " + getAge() + "\n Address : " + getAddress()
+				+ "\n Planning : " + getPlanning();
 	}
 }

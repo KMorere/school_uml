@@ -28,10 +28,11 @@ public abstract class Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	public Person(String firstname, String lastName, int age, Planning planning) {
+	public Person(String firstname, String lastName, int age, String address,  Planning planning) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
+		this.address = address;
 		this.planning = planning;
 	}
 	
@@ -41,10 +42,11 @@ public abstract class Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	public Person(String firstname, String lastName, int age) {
+	public Person(String firstname, String lastName, int age, String address) {
 		this.firstName = firstname;
 		this.lastName = lastName;
 		this.age = age;
+		this.address = address;
 		this.planning = new Planning();
 	}
 
@@ -140,8 +142,8 @@ public abstract class Person {
 	 */
 	@Override
 	public String toString() {
-		return "Person [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", address=" + address
-				+ ", planning=" + planning + "]";
+		return " Firstname : " + firstName + "\n LastName : " + lastName + "\n Age : " + age + "\n Address : " + address
+				+ "\n Planning : " + planning.toString();
 	}
 	
 	

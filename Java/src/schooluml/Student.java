@@ -7,7 +7,7 @@ public class Student extends Person {
 	
 
 	private int id;
-	static int countId = 0;
+	static int countId;
 	
 	/**
 	 * Constructor
@@ -24,8 +24,8 @@ public class Student extends Person {
 	 * @param age to set
 	 * @param planning to set
 	 */
-	public Student(String firstname, String lastName, int age, Planning planning) {
-		super(firstname, lastName, age, planning);
+	public Student(String firstname, String lastName, int age, String address, Planning planning) {
+		super(firstname, lastName, age, address, planning);
 		this.setId();
 	}
 
@@ -35,8 +35,8 @@ public class Student extends Person {
 	 * @param lastName to set
 	 * @param age to set
 	 */
-	public Student(String firstname, String lastName, int age) {
-		super(firstname, lastName, age);
+	public Student(String firstname, String lastName, String address, int age) {
+		super(firstname, lastName, age, address);
 		this.setId();
 	}
 
@@ -64,10 +64,8 @@ public class Student extends Person {
 
     @Override
 	public String toString() {
-		return "Student [id=" + id + ", getFirstName()=" + getFirstName() + ", getLastName()=" + getLastName()
-				+ ", getAge()=" + getAge() + ", getAddress()=" + getAddress() + ", getPlanning()=" + getPlanning()
-				+ ", toString()=" + super.toString() + ", getClass()=" + getClass() + ", hashCode()=" + hashCode()
-				+ "]";
+		return " Firstname : " + getFirstName() + "\n Lastname : " + getLastName() + "\n Id=" + id 
+				+ "\n Age : " + getAge() + "\n Address : " + getAddress() + "\n Planning : " + getPlanning();
 	}
 
 	/**

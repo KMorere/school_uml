@@ -8,7 +8,7 @@ class Admin(Person):
         super().__init__(_first_name, _last_name, _age, None, None)
 
     def teach(self):
-        super()
+        ...
 
     def participate(self):
-        super()
+        return super()

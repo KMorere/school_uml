@@ -41,7 +41,7 @@ public class Address {
      * Constructeur sans addtionalInfo.
      * Permet de créer une adresse basique.
      */
-    public Address(City city, String street, String streetNumber, String additionalInfo) {
+    public Address(City city, String street, String streetNumber) {
     	 this.city = city;
          this.street = street;
          this.streetNumber = streetNumber;

@@ -71,3 +71,4 @@ public class City {
         return "City{name='" + name + "', country='" + country + "', postalCode='" + postalCode + "'}";
     }
 } 
+

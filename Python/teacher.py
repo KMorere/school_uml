@@ -9,5 +9,12 @@ class Teacher(Person):
         super().__init__(_first_name, _last_name, _age, None, None)
         school.School.add_teacher(self)
 
-    def teach(self) -> None:
-        super()
+    def __str__(self):
+        return (f"Teacher: "
+                f"\n[{self.first_name} {self.last_name}],"
+                f"\n[{self.age} ans],"
+                f"\n{self.address.__str__()},"
+                )
+
+    def teach(self):
+        return super()

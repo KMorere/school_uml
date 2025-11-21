@@ -47,7 +47,7 @@ class Person(ABC):
         print(self.first_name + " is educating.")
 
     def __str__(self):
-        return (f"Student: "
+        return (f"Person: "
                 f"\n[id:{self.id}]"
                 f"\n[{self.first_name} {self.last_name}],"
                 f"\n[{self.age} ans],"
