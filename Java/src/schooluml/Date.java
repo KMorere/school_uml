@@ -19,7 +19,7 @@ public class Date {
      * @param month
      * @param year
      */
-    public Date(int id, int numberDay, int month, int year){
+    public Date(int numberDay, int month, int year){
         setId();
         setNumberDay(numberDay);
         setMonth(month);
