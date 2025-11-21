@@ -16,6 +16,8 @@ public class Classroom {
 	// Liste des personnes appartenant à cette salle.
 	private ArrayList<Person> person;
 	
+	private int id;
+	
 	// Compteur statique permettant de générer des IDs uniques.
 	private static int countId = 0;
 	
@@ -25,6 +27,7 @@ public class Classroom {
 	 */
 	public Classroom() {
 		this.person = new ArrayList<Person>();
+		this.setId();
 	}
 	
 	/**
@@ -36,6 +39,7 @@ public class Classroom {
 		this.name = name;
 		this.size = size;
 		this.person = new ArrayList<>();
+		this.setId();
 	}
 	
 	// Getters et Setters
